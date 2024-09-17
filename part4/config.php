@@ -11,8 +11,8 @@ error_reporting(E_ALL);
 $root = $_SERVER['DOCUMENT_ROOT'];
 $host = $_SERVER['HTTP_HOST'];
 
-define('HOST', 'http://'.$host.'/MyBasics-API/fullstack-php-js-natif/part4/');
-define('ROOT', $root.'/MyBasics-API/fullstack-php-js-natif/part4/');
+define('HOST', 'http://'.$host.'/MyBasicMVC/part4/');
+define('ROOT', $root.'/MyBasicMVC/part4/');
 
 define('CONTROLLER', ROOT.'controller/');
 define('VIEW', ROOT.'view/');

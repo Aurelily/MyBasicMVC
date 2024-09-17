@@ -3,7 +3,7 @@
 ini_set('display_errors', 'on');
 error_reporting(E_ALL);
 
-// On va crée une fonction static (car ne va être instancier qu'une seule fois au lancement) start() dans une classe Autoloader qui va précharger toutes nos classes
+// On va crée une fonction static (car ne va être instanciée qu'une seule fois au lancement) start() dans une classe Autoloader qui va précharger toutes nos classes
 
 class Autoloader{
 
@@ -16,8 +16,8 @@ class Autoloader{
         $root = $_SERVER['DOCUMENT_ROOT'];
         $host = $_SERVER['HTTP_HOST'];
 
-        define('HOST', 'http://'.$host.'/MyBasics-API/fullstack-php-js-natif/part6/');
-        define('ROOT', $root.'/MyBasics-API/fullstack-php-js-natif/part6/');
+        define('HOST', 'http://'.$host.'/MyBasicMVC/part6/');
+        define('ROOT', $root.'/MyBasicMVC/part6/');
 
         define('CONTROLLER', ROOT.'controller/');
         define('VIEW', ROOT.'view/');
@@ -30,7 +30,7 @@ class Autoloader{
     }
 
 
-    // Cette fonction test si la classe existe dans le dossier spécifié et si oui il la charge avec un include
+    // Cette fonction teste si la classe existe dans le dossier spécifié et si oui il la charge avec un include
     public static function autoload($class){
 
         if(file_exists(MODEL.$class.'.php')){
