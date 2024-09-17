@@ -4,7 +4,7 @@
  * Classe Profile
  * Sert à rendre la page profile
  */
-class Profile
+class ProfileController
 {
     public function showProfile(){
         $id = 2; // remplace 1 par l'ID de l'utilisateur que tu souhaites sélectionner
@@ -23,10 +23,15 @@ class Profile
         } else {
             echo "Aucun utilisateur trouvé avec cet ID.";
         }
+
+        $variables = [
+            'user' => $user,
+        ];
         
         
-        /* var_dump($users); */
-        include_once VIEW.'profile.php';
+         // On génère la vue de la page profile via l'objet View et la methode render() crée dans classes
+         $myView = new AbstractController('profile');
+         $myView->render( $variables);
 
     }
 }

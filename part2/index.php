@@ -10,9 +10,9 @@ $p = $_GET['p'];
 
 
 if($p == 'home'){
-    include_once CONTROLLER.'HomeController.php';
+    include_once CONTROLLER.'home.php';
 }else if($p == 'profile'){
-    include_once CONTROLLER.'ProfilController.php';
+    include_once CONTROLLER.'profile.php';
 }else{
     echo "erreur 404";
 }

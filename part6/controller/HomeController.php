@@ -6,7 +6,7 @@
  * Classe Home
  * Sert à rendre la home page
  */
-class Home
+class HomeController
 {
     public function showHome(){
         $query = "SELECT * from users";
@@ -21,8 +21,14 @@ class Home
             $users[]=$user;
         }
 
-        /* var_dump($users); */
-        include_once VIEW.'home.php';
+        $variables = [
+            'users' => $users,
+        ];
+
+        // On génère la vue de la home page via l'objet View et la methode render() crée dans classes
+        $myView = new AbstractController('home');
+        $myView->render($variables);
+
 
     }
 

@@ -11,8 +11,8 @@ class Routeur
 
     //
     private $routes = [
-        "home"=>["controller"=>'Home', "method"=>"showHome"],
-        "profile"=>["controller"=>'Profile', "method"=>"showProfile"]
+        "home"=>["controller"=>'HomeController', "method"=>"showHome"],
+        "profile"=>["controller"=>'ProfileController', "method"=>"showProfile"]
     ];
 
     public function __construct($request){
