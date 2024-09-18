@@ -29,7 +29,7 @@ class ProfileController
         ];
         
         
-         // On génère la vue de la page profile via l'objet View et la methode render() crée dans classes
+         // On génère la vue de la page profile via l'objet AbstractController et la methode render()
          $myView = new AbstractController('profile');
          $myView->render( $variables);
 

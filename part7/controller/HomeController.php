@@ -9,17 +9,11 @@
 class HomeController
 {
     public function showHome(){
-        $query = "SELECT * from users";
-        $bdd = new PDO("mysql:host=localhost;dbname=calanques;charset=utf8", "root", "");
-        $req = $bdd->prepare($query);
-        $req->execute();
 
-        while($row = $req->fetch(PDO::FETCH_ASSOC)){
-            $user['pseudo'] = $row['pseudo'];
-            $user['email'] = $row['email'];
+        // Creation d'un model UserManager pour gérer le SQL et un Model User qui contient juste les setters et les getters
+        $manager = new UserManager();
+        $users = $manager->findAll();
 
-            $users[]=$user;
-        }
 
         $variables = [
             'users' => $users,
